@@ -74,10 +74,8 @@ public class SiparisMusteriActivity extends AppCompatActivity {
                 }
                 //siparis yapma islemi gerceklestirilecek
                 SiparisVeriIletsimi svi = new SiparisVeriIletsimi(SiparisMusteriActivity.this);
-                SiparisYemekVeriIletisimi syvi = new SiparisYemekVeriIletisimi(SiparisMusteriActivity.this);
                 Siparis s = new Siparis(musteri,siparisVerilenYemekler);
                 svi.siparisEkle(s);
-                syvi.siparisYemekleriniEkle(s);
                 Toast.makeText(getApplicationContext(), "Siparisiniz Olusturulmustur", Toast.LENGTH_SHORT).show();
 
                 SiparisMusteriActivity.this.finish();

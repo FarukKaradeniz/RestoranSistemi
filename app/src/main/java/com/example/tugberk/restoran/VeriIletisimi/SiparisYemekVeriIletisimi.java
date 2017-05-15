@@ -47,7 +47,6 @@ public class SiparisYemekVeriIletisimi extends VeriIletisimi {
             yemekIdLeri.add(i);
             c.moveToNext();
         }
-
         return yemekIdLeri;
     }
 }
