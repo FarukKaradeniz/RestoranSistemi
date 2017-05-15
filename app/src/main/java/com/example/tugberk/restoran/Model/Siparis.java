@@ -22,6 +22,12 @@ public class Siparis {
         this.yemekler = yemekler;
     }
 
+    public Siparis(Musteri musteri, ArrayList<Yemek> yemekler, int id) {
+        this.musteri = musteri;
+        this.yemekler = yemekler;
+        this.id = id;
+    }
+
     public Musteri getMusteri() {
         return musteri;
     }

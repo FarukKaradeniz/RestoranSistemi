@@ -46,7 +46,7 @@ public class SiparisVeriIletsimi  extends VeriIletisimi {
     public void siparisSil(Siparis s){
 
         String whereClause = Siparis.DB.ID + " = ?";
-        db.delete(Siparis.DB.TABLO_ADI,whereClause,new String[]{String.valueOf(s.getId())});
+        int a = db.delete(Siparis.DB.TABLO_ADI,whereClause,new String[]{String.valueOf(s.getId())});
         SiparisYemekVeriIletisimi syvi = new SiparisYemekVeriIletisimi(ctx);
         syvi.siparisYemekleriniSil(s);
 
@@ -68,8 +68,7 @@ public class SiparisVeriIletsimi  extends VeriIletisimi {
             for(Integer i : yemekIdleri){
                 yemekler.add(yvi.idDenYemekDondur(i));
             }
-            //yvi.kapat();
-            siparisler.add(new Siparis(musteri,yemekler));
+            siparisler.add(new Siparis(musteri,yemekler,siparisCursor.getInt(0)));
             siparisCursor.moveToNext();
         }
         return siparisler;

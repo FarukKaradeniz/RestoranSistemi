@@ -13,6 +13,7 @@ import com.example.tugberk.restoran.Model.Siparis;
 import com.example.tugberk.restoran.Model.Yemek;
 import com.example.tugberk.restoran.R;
 import com.example.tugberk.restoran.VeriIletisimi.SiparisVeriIletsimi;
+import com.example.tugberk.restoran.VeriIletisimi.SiparisYemekVeriIletisimi;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -65,10 +66,12 @@ public class RestoranSiparis extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(pozisyon != -1){
-                    String s = siparisBilgiler.remove(pozisyon);
-                    Toast.makeText(getApplicationContext(), s + "silindi", Toast.LENGTH_SHORT).show();
+                    SiparisVeriIletsimi svi = new SiparisVeriIletsimi(RestoranSiparis.this);
+                    Siparis siparis = siparisler.get(pozisyon);
+                    svi.siparisSil(siparis);
+                    Toast.makeText(getApplicationContext(),"Silindi",Toast.LENGTH_SHORT).show();
                     //bilgiye sahip siparis veri tabanindan silinecek
-                    //siparisleriYukle();
+                    siparisleriYukle();
                     listViewUpdate();
                 }
                 pozisyon = -1;
