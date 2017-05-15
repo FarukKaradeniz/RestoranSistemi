@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/turuncu"
+    tools:context=".Activity.RestoranYemek">
+
+
+
+    <ListView
+        android:id="@+id/yemekListesi"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewRY" />
+
+
+
+    <TextView
+        android:id="@+id/textViewRY"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Yemek Listesi"
+        android:textColor="@color/colorTexts"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/yemek_isim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yemekListesi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Yemek ismi"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/yemek_fiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/yemek_isim"
+        android:layout_below="@+id/yemek_isim"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="Yemek Fiyat"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/yemekSilBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/yemek_fiyat"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/button_selector"
+        android:text="yemek\nsil"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/yemekGuncelleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/yemekSilBtn"
+        android:layout_toEndOf="@+id/yemekSilBtn"
+        android:background="@drawable/button_selector"
+        android:text="yemek\ngüncelle"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/yemekEkleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/yemekGuncelleBtn"
+        android:layout_alignBottom="@+id/yemekGuncelleBtn"
+        android:layout_toEndOf="@+id/yemekGuncelleBtn"
+        android:background="@drawable/button_selector"
+        android:text="yemek\nekle"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tugberk.restoran">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/to_rezervasyonlar"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/to_rezervasyonlar"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.KayitolActivity" />
+        <activity android:name=".Activity.MusteriMenu" />
+        <activity android:name=".Activity.RezervasyonMusteriActivity" />
+        <activity android:name=".Activity.SiparisMusteriActivity" />
+        <activity android:name=".Activity.AbonelikYokMusteriActivity" />
+        <activity android:name=".Activity.RestoranMenu" />
+        <activity android:name=".Activity.RezervasyonRestoran" />
+        <activity android:name=".Activity.RestoranYemek" />
+        <activity android:name=".Activity.RestoranSiparis" />
+        <activity android:name=".Activity.RestoranAbonelik" />
+        <activity android:name=".Activity.AbonelikVarMusteriActivity"></activity>
+    </application>
+
+</manifest>

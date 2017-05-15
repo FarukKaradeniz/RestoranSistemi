@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/turuncu"
+    tools:context=".Activity.RestoranMenu">
+
+    <Button
+        android:id="@+id/rezervasyonRestoran"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_selector"
+        android:text="Rezervasyonları Görüntüle"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/yemekIslem"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/rezervasyonRestoran"
+        android:layout_alignStart="@id/rezervasyonRestoran"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/button_selector"
+        android:text="Yemek işlemleri"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/abonelikIslem"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/yemekIslem"
+        android:layout_alignStart="@id/yemekIslem"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/button_selector"
+        android:text="Abonelikleri görüntüle"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/siparisIslem"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/abonelikIslem"
+        android:layout_alignStart="@id/abonelikIslem"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/button_selector"
+        android:text="Siparişleri görüntüle"
+        android:textSize="18sp" />
+</RelativeLayout>

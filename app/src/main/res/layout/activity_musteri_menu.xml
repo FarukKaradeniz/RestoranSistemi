@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/turuncu"
+    tools:context=".Activity.MusteriMenu">
+
+    <Button
+        android:id="@+id/toRez"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/button_selector"
+        android:text="Rezervasyon İşlemleri"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/toSiparis"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_alignStart="@+id/toRez"
+        android:layout_below="@+id/toRez"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/button_selector"
+        android:text="Sipariş Verme"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/toAbonelik"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_alignStart="@+id/toSiparis"
+        android:layout_below="@+id/toSiparis"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/button_selector"
+        android:text="Abonelik işlemleri"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/musteriHosgeldi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="Hoşgeldiniz Sayın -- --"
+        android:textColor="@color/colorTexts"
+        android:textSize="24sp" />
+</RelativeLayout>

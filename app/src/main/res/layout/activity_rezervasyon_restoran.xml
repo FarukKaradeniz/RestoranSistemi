@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/turuncu"
+    tools:context=".Activity.RezervasyonRestoran">
+
+    <TextView
+        android:id="@+id/rezListTxtRestoran"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Rezervasyonlar"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <ListView
+        android:id="@+id/rezervasyonListRestoran"
+        style="@style/Widget.AppCompat.ListView.DropDown"
+        android:layout_width="match_parent"
+        android:layout_height="387dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rezListTxtRestoran" />
+
+    <Button
+        android:id="@+id/rezGoruntuleRestoran"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/rezervasyonListRestoran"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_selector"
+        android:text="Rezervasyonları Görüntüle"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

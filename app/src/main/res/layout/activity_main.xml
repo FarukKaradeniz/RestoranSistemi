@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/turuncu"
+    android:weightSum="1"
+    tools:context=".Activity.MainActivity">
+
+
+    <Button
+        android:id="@+id/girisEkraninaGonder"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/yeniKayitaGonder"
+        android:layout_alignBottom="@+id/yeniKayitaGonder"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/button_selector"
+        android:text="giriş"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/yeniKayitaGonder"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="44dp"
+        android:layout_marginStart="27dp"
+        android:background="@drawable/button_selector"
+        android:text="yeni kayıt"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/resimEkraniYazi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.29"
+        android:gravity="center"
+        android:text="Restoran Sistemi"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/resimEkraniResim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1.09"
+        app:srcCompat="@drawable/food_icon" />
+
+</RelativeLayout>
