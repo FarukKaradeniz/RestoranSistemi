@@ -32,9 +32,6 @@ public class RestoranYemek extends AppCompatActivity {
         init();
         yemekleriListele();
         handleListeners();
-
-
-
     }
     private void init(){
         yemekler = (ListView) findViewById(R.id.yemekListesi);

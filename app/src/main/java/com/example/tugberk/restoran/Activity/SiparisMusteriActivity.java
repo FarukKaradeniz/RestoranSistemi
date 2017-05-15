@@ -21,6 +21,7 @@ import com.example.tugberk.restoran.VeriIletisimi.MusteriVeriIletisimi;
 import com.example.tugberk.restoran.VeriIletisimi.SiparisVeriIletsimi;
 import com.example.tugberk.restoran.VeriIletisimi.SiparisYemekVeriIletisimi;
 import com.example.tugberk.restoran.VeriIletisimi.VeriIletisimi;
+import com.example.tugberk.restoran.VeriIletisimi.YemekVeriIletisimi;
 
 import java.util.ArrayList;
 
@@ -37,12 +38,10 @@ public class SiparisMusteriActivity extends AppCompatActivity {
         setContentView(R.layout.activity_siparis_musteri);
         init();
         MusteriVeriIletisimi mvi = new MusteriVeriIletisimi(SiparisMusteriActivity.this);
+        YemekVeriIletisimi yvi = new YemekVeriIletisimi(SiparisMusteriActivity.this);
         Intent intent = getIntent();
         musteri = mvi.idDenMusteriOlustur(intent.getIntExtra("MusteriID",0));
-        ArrayList<Yemek> foods = new ArrayList<>();
-        foods.add(new Yemek("haslama",10));
-        foods.add(new Yemek("bazlama",1));
-        foods.add(new Yemek("hamsi",15));
+        ArrayList<Yemek> foods = yvi.yemekListesi();
         for (final Yemek yemek : foods){
             final CheckBox tmp = new CheckBox(SiparisMusteriActivity.this);
             tmp.setTextColor(Color.DKGRAY);
