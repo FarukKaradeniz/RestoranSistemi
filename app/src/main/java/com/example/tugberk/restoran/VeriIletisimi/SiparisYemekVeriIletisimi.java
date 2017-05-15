@@ -23,6 +23,7 @@ public class SiparisYemekVeriIletisimi extends VeriIletisimi {
         ContentValues cv = new ContentValues();
         cv.put(SiparisYemekleri.DB.SIPARIS_ID,s.getId());
         for(Yemek y : s.getYemekler()){
+            int i = y.getId();
             cv.put(SiparisYemekleri.DB.YEMEK_ID,y.getId());
             db.insert(SiparisYemekleri.DB.TABLO_ADI,null,cv);
         }
@@ -42,7 +43,8 @@ public class SiparisYemekVeriIletisimi extends VeriIletisimi {
         ArrayList<Integer> yemekIdLeri = new ArrayList<>();
         c.moveToFirst();
         while(!c.isAfterLast()){
-            yemekIdLeri.add(c.getInt(0));
+            int i = c.getInt(0);
+            yemekIdLeri.add(i);
             c.moveToNext();
         }
 

@@ -52,15 +52,7 @@ public class SiparisVeriIletsimi  extends VeriIletisimi {
 
     }
     public ArrayList<Siparis> siparisListesiniDondur(){
-        /*
-        String sql = "select * from " + Musteri.DB.TABLO_ADI + ", " +
-                Siparis.DB.TABLO_ADI + ", " + SiparisYemekleri.DB.TABLO_ADI + ", " +
-                Yemek.DB.TABLO_ADI + " where " +  Siparis.DB.TABLO_ADI + "." + Siparis.DB.MUSTERI_ID + " = " +
-                Musteri.DB.TABLO_ADI + "." + Musteri.DB.ID + " and " + Siparis.DB.TABLO_ADI + "." +
-                Siparis.DB.ID + " = " + SiparisYemekleri.DB.TABLO_ADI + "." + SiparisYemekleri.DB.SIPARIS_ID +
-                " and " + SiparisYemekleri.DB.TABLO_ADI + "." + SiparisYemekleri.DB.YEMEK_ID + " = " +
-                Yemek.DB.ID;
-        */
+
         String sql = "select * from " + Siparis.DB.TABLO_ADI;
         Cursor siparisCursor = db.rawQuery(sql,null);
         //kapat();
@@ -69,10 +61,8 @@ public class SiparisVeriIletsimi  extends VeriIletisimi {
         while(!siparisCursor.isAfterLast()){
             MusteriVeriIletisimi mvi = new MusteriVeriIletisimi(ctx);
             Musteri musteri = mvi.idDenMusteriOlustur(siparisCursor.getInt(1));
-           // mvi.kapat();
             SiparisYemekVeriIletisimi syvi = new SiparisYemekVeriIletisimi(ctx);
             ArrayList<Integer> yemekIdleri = syvi.siparisYemekleriIdleriniDOndur(siparisCursor.getInt(0));
-           // syvi.kapat();
             ArrayList<Yemek> yemekler = new ArrayList<>();
             YemekVeriIletisimi yvi = new YemekVeriIletisimi(ctx);
             for(Integer i : yemekIdleri){
